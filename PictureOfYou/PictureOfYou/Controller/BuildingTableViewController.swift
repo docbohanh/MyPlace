@@ -35,6 +35,7 @@ extension BuildingTableViewController {
         
         if let image = UIImage(named: imageName) {
             cell.setImage(image, title: title)
+            
         }
     }
     

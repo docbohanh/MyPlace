@@ -8,6 +8,7 @@
 
 import PreviewTransition
 import UIKit
+import SKPhotoBrowser
 
 public class DetailViewController: PTDetailViewController {
     
@@ -40,6 +41,7 @@ extension DetailViewController {
         showControlViewDuration(duration: 0.3)
         
         let _ = createBlurView()
+        
     }
 }
 
@@ -99,6 +101,20 @@ extension DetailViewController {
             }
         }
     }
+    
+    func showImage(_ sender: UITapGestureRecognizer) {
+        
+        guard let imageView =  sender.view as? UIImageView else { return }
+        guard let image = imageView.image else { return }
+        
+        let photos: [SKPhoto] = [SKPhoto.photoWithImage(image)]
+        
+        let browser = SKPhotoBrowser(photos: photos)
+        browser.initializePageIndex(0)
+        present(browser, animated: true, completion: {})
+        
+    }
+    
 }
 
 // MARK: animations

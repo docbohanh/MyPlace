@@ -38,20 +38,21 @@ internal protocol Moving: class {
 extension Moving where Self: UIView {
   
   func move(_ duration: Double, direction: MovingDirection, completion: ((Bool) -> Void)?) {
-    UIView.animate(withDuration: duration,
-                               delay: 0,
-                               usingSpringWithDamping: 0.78,
-                               initialSpringVelocity: 0,
-                               options: UIViewAnimationOptions(),
-                               animations: { [weak self] () -> Void in
-                                guard let `self` = self else { return }
-      var toYPosition = self.defaultYPosition
-      if direction == .up {
-        self.defaultYPosition = self.frame.origin.y
-        toYPosition = 20
-      }
-      self.frame = CGRect(x: 0, y: toYPosition, width: self.frame.size.width, height: self.frame.size.height)
-    }, completion: completion)
+    UIView.animate(
+        withDuration: duration,
+        delay: 0,
+        usingSpringWithDamping: 0.78,
+        initialSpringVelocity: 0,
+        options: UIViewAnimationOptions(),
+        animations: { [weak self] () -> Void in
+            guard let `self` = self else { return }
+            var toYPosition = self.defaultYPosition
+            if direction == .up {
+                self.defaultYPosition = self.frame.origin.y
+                toYPosition = 20
+            }
+            self.frame = CGRect(x: 0, y: toYPosition, width: self.frame.size.width, height: self.frame.size.height)
+        }, completion: completion)
   }
 }
 
@@ -68,13 +69,14 @@ internal class MovingView: UIView {
       defaultYPosition = frame.origin.y
       yPosition = distance
     }
-    UIView.animate(withDuration: duration,
-                               delay: 0,
-                               usingSpringWithDamping: 0.78,
-                               initialSpringVelocity: 0,
-                               options: UIViewAnimationOptions(),
-                               animations: { () -> Void in
-                                self.frame.origin.y = yPosition
+    UIView.animate(
+        withDuration: duration,
+        delay: 0,
+        usingSpringWithDamping: 0.78,
+        initialSpringVelocity: 0,
+        options: UIViewAnimationOptions(),
+        animations: { () -> Void in
+            self.frame.origin.y = yPosition
     }, completion: completion)
   }
 

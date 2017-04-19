@@ -18,6 +18,8 @@
 		1320BBFD1EA749940033CF22 /* PTTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320BBFC1EA749940033CF22 /* PTTableViewController.swift */; };
 		1320BC001EA749CF0033CF22 /* MovingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320BBFF1EA749CF0033CF22 /* MovingViews.swift */; };
 		1320BC021EA74BDE0033CF22 /* ParallaxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320BC011EA74BDE0033CF22 /* ParallaxCell.swift */; };
+		1320BC041EA753230033CF22 /* SKPhotoBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1320BC031EA753230033CF22 /* SKPhotoBrowser.framework */; };
+		1320BC051EA753230033CF22 /* SKPhotoBrowser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1320BC031EA753230033CF22 /* SKPhotoBrowser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		13BC21541EA6122D0014A527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21531EA6122D0014A527 /* AppDelegate.swift */; };
 		13BC21561EA6122D0014A527 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21551EA6122D0014A527 /* ViewController.swift */; };
 		13BC21591EA6122D0014A527 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13BC21571EA6122D0014A527 /* Main.storyboard */; };
@@ -77,6 +79,7 @@
 				1320BBEE1EA7207C0033CF22 /* PreviewTransition.framework in Embed Frameworks */,
 				13BC21AD1EA61BE60014A527 /* Realm.framework in Embed Frameworks */,
 				13BC21941EA618D00014A527 /* PHExtensions.framework in Embed Frameworks */,
+				1320BC051EA753230033CF22 /* SKPhotoBrowser.framework in Embed Frameworks */,
 				13BC21981EA618D00014A527 /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -95,6 +98,7 @@
 		1320BBFC1EA749940033CF22 /* PTTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTTableViewController.swift; sourceTree = "<group>"; };
 		1320BBFF1EA749CF0033CF22 /* MovingViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingViews.swift; sourceTree = "<group>"; };
 		1320BC011EA74BDE0033CF22 /* ParallaxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxCell.swift; sourceTree = "<group>"; };
+		1320BC031EA753230033CF22 /* SKPhotoBrowser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SKPhotoBrowser.framework; path = PictureOfYou/Framework/SKPhotoBrowser.framework; sourceTree = "<group>"; };
 		13BC21501EA6122D0014A527 /* PictureOfYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureOfYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13BC21531EA6122D0014A527 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13BC21551EA6122D0014A527 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 				1320BBED1EA7207C0033CF22 /* PreviewTransition.framework in Frameworks */,
 				13BC21AC1EA61BE60014A527 /* Realm.framework in Frameworks */,
 				13BC21931EA618D00014A527 /* PHExtensions.framework in Frameworks */,
+				1320BC041EA753230033CF22 /* SKPhotoBrowser.framework in Frameworks */,
 				13BC21971EA618D00014A527 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +246,7 @@
 		13BC219A1EA618D40014A527 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				1320BC031EA753230033CF22 /* SKPhotoBrowser.framework */,
 				1320BBEC1EA7207C0033CF22 /* PreviewTransition.framework */,
 				13BC21AB1EA61BE60014A527 /* Realm.framework */,
 				13BC219B1EA619150014A527 /* JGProgressHUD.framework */,
