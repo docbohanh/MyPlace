@@ -92,7 +92,7 @@ extension BuildingListViewController: UITableViewDataSource {
         cell.selectionStyle = .none
         
         cell.textLabel?.text = building.name
-        cell.detailTextLabel?.text = building.address
+        cell.detailTextLabel?.text = Utility.shared.split(longString: building.address, maxCharacter: 40)
         
         cell.labelTime.text = Utility.shared.stringFromPastTimeToText(building.createDate)
         cell.imageView?.image = UIImage.Asset.empty.image

@@ -47,7 +47,7 @@ class BuildingTableViewCell: UITableViewCell {
         textLabel?.frame = CGRect(x: imageView.frame.maxX + Size.Padding5..,
                                   y: 0,
                                   width: contentView.frame.width - imageView.frame.maxX - Size.Padding10.. * 2,
-                                  height: contentView.frame.height / 2)
+                                  height: 40)
         
         labelTime.frame =  CGRect(x: imageView.frame.maxX + Size.Padding10..,
                                   y: contentView.frame.height  - Size.Label..,
@@ -55,9 +55,9 @@ class BuildingTableViewCell: UITableViewCell {
                                   height: Size.Label..)
         
         detailTextLabel?.frame = CGRect(x: imageView.frame.maxX + Size.Padding5..,
-                                        y: contentView.frame.height / 2,
+                                        y: textLabel!.frame.maxY,
                                         width: contentView.frame.width - imageView.frame.maxX - Size.Padding10..,
-                                        height: contentView.frame.height / 2)
+                                        height: 32)
         
         
     }
