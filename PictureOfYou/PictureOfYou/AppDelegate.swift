@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CleanroomLogger
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,12 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let navigationController = setupNavigationController()
-        
-        if let window = window {
-            window.rootViewController = navigationController
-            window.makeKeyAndVisible()
-        }
+        configureNavigationBar()
         
         return true
     }
@@ -56,16 +52,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-    /**
-     Setup Navigation
-     */
-    fileprivate func setupNavigationController() -> UINavigationController {
+    fileprivate func configureNavigationBar() {
+        //transparent background
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().isTranslucent = true
         
-        let mainVC = BuildingListViewController()
-        let navigationController = UINavigationController(rootViewController: mainVC)
-        Utility.shared.configureAppearance(navigation: navigationController)
         
-        return navigationController
+        if let font = UIFont(name: "Avenir-medium" , size: 18) {
+            UINavigationBar.appearance().titleTextAttributes = [
+                NSForegroundColorAttributeName : UIColor.white,
+                NSFontAttributeName : font
+            ]
+        }
     }
     
 }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyUserDefaults
 
 public let isPad: Bool = {return UI_USER_INTERFACE_IDIOM() == .pad}()
 
@@ -63,17 +62,6 @@ enum FontType: String {
 enum LanguageValue: Int {
     case vietnamese = 0
     case english    = 1
-}
-
-public extension DefaultsKeys {
-    public static let username          = DefaultsKey<String>("Username")
-    public static let password          = DefaultsKey<String>("Password")
-    public static let rememberMe        = DefaultsKey<Bool>("RememberMe")
-    public static let isLogin           = DefaultsKey<Bool>("IsLogin")
-    public static let firstRun          = DefaultsKey<Bool>("FirstRun")
-    
-    public static let homeMapTypeNormal = DefaultsKey<Bool>("homeMapType")
-    public static let devicekey         = DefaultsKey<String>("devicekey")
 }
 
 

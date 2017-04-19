@@ -22,6 +22,7 @@ extension DatabaseSupport {
         }
         catch {
             Log.message(.error, message: "getAllBuildings error: \(error)")
+            return []
         }
     }
     
@@ -32,8 +33,8 @@ extension DatabaseSupport {
                 .first { $0.buildingID == id }
         }
         catch {
-            return nil
             Log.message(.error, message: "getBuilding error: \(error)")
+            return nil
         }
     }
     
@@ -44,6 +45,7 @@ extension DatabaseSupport {
         }
         catch {
             Log.message(.error, message: "getAllImages error: \(error)")
+            return []
         }
     }
     
@@ -54,8 +56,8 @@ extension DatabaseSupport {
                 .first { $0.imageID == id }
         }
         catch {
-            return nil
             Log.message(.error, message: "getImage error: \(error)")
+            return nil
         }
     }
     
@@ -66,8 +68,8 @@ extension DatabaseSupport {
                 .filter { $0.buildingID == buildingID }
         }
         catch {
-            return []
             Log.message(.error, message: "getImage error: \(error)")
+            return []
         }
     }
     

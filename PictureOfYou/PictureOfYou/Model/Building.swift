@@ -31,7 +31,7 @@ struct Building {
         
     }
 
-    init(building: String,
+    init(buildingID: String,
          name: String,
          address: String,
          invester: String,

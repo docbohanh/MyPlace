@@ -6,7 +6,7 @@
 //  Copyright © 2017 Thành Lã. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Image {
     var imageID: String

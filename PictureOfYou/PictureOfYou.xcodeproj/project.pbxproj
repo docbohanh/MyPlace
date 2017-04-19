@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		1320BBED1EA7207C0033CF22 /* PreviewTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1320BBEC1EA7207C0033CF22 /* PreviewTransition.framework */; };
 		1320BBEE1EA7207C0033CF22 /* PreviewTransition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1320BBEC1EA7207C0033CF22 /* PreviewTransition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1320BBF01EA746CF0033CF22 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320BBEF1EA746CF0033CF22 /* DetailViewController.swift */; };
+		1320BBF21EA746FE0033CF22 /* PTDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320BBF11EA746FE0033CF22 /* PTDetailViewController.swift */; };
+		1320BBF51EA747780033CF22 /* ConstraintsHalper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320BBF41EA747780033CF22 /* ConstraintsHalper.swift */; };
+		1320BBF71EA747F20033CF22 /* ScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320BBF61EA747F20033CF22 /* ScreenShot.swift */; };
+		1320BBF91EA748250033CF22 /* LayerAnimationHalper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320BBF81EA748250033CF22 /* LayerAnimationHalper.swift */; };
+		1320BBFB1EA748E80033CF22 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320BBFA1EA748E80033CF22 /* Extensions.swift */; };
+		1320BBFD1EA749940033CF22 /* PTTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320BBFC1EA749940033CF22 /* PTTableViewController.swift */; };
+		1320BC001EA749CF0033CF22 /* MovingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320BBFF1EA749CF0033CF22 /* MovingViews.swift */; };
+		1320BC021EA74BDE0033CF22 /* ParallaxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320BC011EA74BDE0033CF22 /* ParallaxCell.swift */; };
 		13BC21541EA6122D0014A527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21531EA6122D0014A527 /* AppDelegate.swift */; };
 		13BC21561EA6122D0014A527 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21551EA6122D0014A527 /* ViewController.swift */; };
 		13BC21591EA6122D0014A527 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13BC21571EA6122D0014A527 /* Main.storyboard */; };
@@ -26,7 +35,7 @@
 		13BC21831EA618700014A527 /* UTM-Avo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13BC21731EA618700014A527 /* UTM-Avo.ttf */; };
 		13BC21841EA618700014A527 /* UTM-AvoItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13BC21741EA618700014A527 /* UTM-AvoItalic.ttf */; };
 		13BC21851EA618700014A527 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21751EA618700014A527 /* HUD.swift */; };
-		13BC21861EA618700014A527 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21761EA618700014A527 /* Image.swift */; };
+		13BC21861EA618700014A527 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21761EA618700014A527 /* Images.swift */; };
 		13BC21871EA618700014A527 /* LoggerSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21771EA618700014A527 /* LoggerSupport.swift */; };
 		13BC21881EA618700014A527 /* SSASideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21781EA618700014A527 /* SSASideMenu.swift */; };
 		13BC21891EA618700014A527 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21791EA618700014A527 /* Utility.swift */; };
@@ -42,7 +51,7 @@
 		13BC21981EA618D00014A527 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13BC218E1EA618D00014A527 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		13BC219C1EA619150014A527 /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13BC219B1EA619150014A527 /* JGProgressHUD.framework */; };
 		13BC219D1EA619150014A527 /* JGProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13BC219B1EA619150014A527 /* JGProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		13BC21A31EA61B660014A527 /* BuildingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21A21EA61B660014A527 /* BuildingListViewController.swift */; };
+		13BC21A31EA61B660014A527 /* BuildingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21A21EA61B660014A527 /* BuildingTableViewController.swift */; };
 		13BC21A51EA61B730014A527 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21A41EA61B730014A527 /* Building.swift */; };
 		13BC21A71EA61B7C0014A527 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21A61EA61B7C0014A527 /* Image.swift */; };
 		13BC21AA1EA61BA70014A527 /* BuildingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21A91EA61BA70014A527 /* BuildingTableViewCell.swift */; };
@@ -77,6 +86,15 @@
 
 /* Begin PBXFileReference section */
 		1320BBEC1EA7207C0033CF22 /* PreviewTransition.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreviewTransition.framework; path = PictureOfYou/Framework/PreviewTransition.framework; sourceTree = "<group>"; };
+		1320BBEF1EA746CF0033CF22 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1320BBF11EA746FE0033CF22 /* PTDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTDetailViewController.swift; sourceTree = "<group>"; };
+		1320BBF41EA747780033CF22 /* ConstraintsHalper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHalper.swift; sourceTree = "<group>"; };
+		1320BBF61EA747F20033CF22 /* ScreenShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenShot.swift; sourceTree = "<group>"; };
+		1320BBF81EA748250033CF22 /* LayerAnimationHalper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerAnimationHalper.swift; sourceTree = "<group>"; };
+		1320BBFA1EA748E80033CF22 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1320BBFC1EA749940033CF22 /* PTTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTTableViewController.swift; sourceTree = "<group>"; };
+		1320BBFF1EA749CF0033CF22 /* MovingViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingViews.swift; sourceTree = "<group>"; };
+		1320BC011EA74BDE0033CF22 /* ParallaxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxCell.swift; sourceTree = "<group>"; };
 		13BC21501EA6122D0014A527 /* PictureOfYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureOfYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13BC21531EA6122D0014A527 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13BC21551EA6122D0014A527 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +115,7 @@
 		13BC21731EA618700014A527 /* UTM-Avo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UTM-Avo.ttf"; sourceTree = "<group>"; };
 		13BC21741EA618700014A527 /* UTM-AvoItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UTM-AvoItalic.ttf"; sourceTree = "<group>"; };
 		13BC21751EA618700014A527 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
-		13BC21761EA618700014A527 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		13BC21761EA618700014A527 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		13BC21771EA618700014A527 /* LoggerSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerSupport.swift; sourceTree = "<group>"; };
 		13BC21781EA618700014A527 /* SSASideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSASideMenu.swift; sourceTree = "<group>"; };
 		13BC21791EA618700014A527 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
@@ -107,7 +125,7 @@
 		13BC218D1EA618D00014A527 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = PictureOfYou/Framework/RealmSwift.framework; sourceTree = "<group>"; };
 		13BC218E1EA618D00014A527 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = PictureOfYou/Framework/SnapKit.framework; sourceTree = "<group>"; };
 		13BC219B1EA619150014A527 /* JGProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JGProgressHUD.framework; path = PictureOfYou/Framework/JGProgressHUD.framework; sourceTree = "<group>"; };
-		13BC21A21EA61B660014A527 /* BuildingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingListViewController.swift; sourceTree = "<group>"; };
+		13BC21A21EA61B660014A527 /* BuildingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingTableViewController.swift; sourceTree = "<group>"; };
 		13BC21A41EA61B730014A527 /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		13BC21A61EA61B7C0014A527 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		13BC21A91EA61BA70014A527 /* BuildingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingTableViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +155,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1320BBF31EA747780033CF22 /* Halpers */ = {
+			isa = PBXGroup;
+			children = (
+				1320BBF41EA747780033CF22 /* ConstraintsHalper.swift */,
+				1320BBF61EA747F20033CF22 /* ScreenShot.swift */,
+				1320BBF81EA748250033CF22 /* LayerAnimationHalper.swift */,
+				1320BBFA1EA748E80033CF22 /* Extensions.swift */,
+			);
+			path = Halpers;
+			sourceTree = "<group>";
+		};
+		1320BBFE1EA749CF0033CF22 /* MovingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				1320BBFF1EA749CF0033CF22 /* MovingViews.swift */,
+			);
+			path = MovingLabel;
+			sourceTree = "<group>";
+		};
 		13BC21471EA6122D0014A527 = {
 			isa = PBXGroup;
 			children = (
@@ -171,12 +208,13 @@
 		13BC21681EA618700014A527 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				1320BBF31EA747780033CF22 /* Halpers */,
 				13BC21B41EA6249F0014A527 /* RxRealm.swift */,
 				13BC216B1EA618700014A527 /* Fonts */,
 				13BC21691EA618700014A527 /* Color.swift */,
 				13BC216A1EA618700014A527 /* Constant.swift */,
 				13BC21751EA618700014A527 /* HUD.swift */,
-				13BC21761EA618700014A527 /* Image.swift */,
+				13BC21761EA618700014A527 /* Images.swift */,
 				13BC21771EA618700014A527 /* LoggerSupport.swift */,
 				13BC21781EA618700014A527 /* SSASideMenu.swift */,
 				13BC21791EA618700014A527 /* Utility.swift */,
@@ -230,7 +268,10 @@
 		13BC219F1EA61B530014A527 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				13BC21A21EA61B660014A527 /* BuildingListViewController.swift */,
+				13BC21A21EA61B660014A527 /* BuildingTableViewController.swift */,
+				1320BBFC1EA749940033CF22 /* PTTableViewController.swift */,
+				1320BBF11EA746FE0033CF22 /* PTDetailViewController.swift */,
+				1320BBEF1EA746CF0033CF22 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -250,6 +291,7 @@
 		13BC21A11EA61B530014A527 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1320BBFE1EA749CF0033CF22 /* MovingLabel */,
 				13BC21A81EA61B900014A527 /* Cell */,
 			);
 			path = View;
@@ -259,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				13BC21A91EA61BA70014A527 /* BuildingTableViewCell.swift */,
+				1320BC011EA74BDE0033CF22 /* ParallaxCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -347,17 +390,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1320BBFB1EA748E80033CF22 /* Extensions.swift in Sources */,
 				13BC21561EA6122D0014A527 /* ViewController.swift in Sources */,
 				13BC21AF1EA61CA90014A527 /* RealmBuilding.swift in Sources */,
+				1320BC001EA749CF0033CF22 /* MovingViews.swift in Sources */,
 				13BC21B31EA623B60014A527 /* DatabaseSupport.swift in Sources */,
 				13BC21A71EA61B7C0014A527 /* Image.swift in Sources */,
-				13BC21861EA618700014A527 /* Image.swift in Sources */,
-				13BC21A31EA61B660014A527 /* BuildingListViewController.swift in Sources */,
+				13BC21861EA618700014A527 /* Images.swift in Sources */,
+				1320BBF21EA746FE0033CF22 /* PTDetailViewController.swift in Sources */,
+				1320BBF51EA747780033CF22 /* ConstraintsHalper.swift in Sources */,
+				13BC21A31EA61B660014A527 /* BuildingTableViewController.swift in Sources */,
+				1320BBF91EA748250033CF22 /* LayerAnimationHalper.swift in Sources */,
 				13BC21A51EA61B730014A527 /* Building.swift in Sources */,
 				13BC21891EA618700014A527 /* Utility.swift in Sources */,
+				1320BBF71EA747F20033CF22 /* ScreenShot.swift in Sources */,
 				13BC21B11EA621AA0014A527 /* RealmImage.swift in Sources */,
+				1320BBF01EA746CF0033CF22 /* DetailViewController.swift in Sources */,
 				13BC21851EA618700014A527 /* HUD.swift in Sources */,
 				13BC21B51EA6249F0014A527 /* RxRealm.swift in Sources */,
+				1320BC021EA74BDE0033CF22 /* ParallaxCell.swift in Sources */,
+				1320BBFD1EA749940033CF22 /* PTTableViewController.swift in Sources */,
 				13BC21541EA6122D0014A527 /* AppDelegate.swift in Sources */,
 				13BC21871EA618700014A527 /* LoggerSupport.swift in Sources */,
 				13BC21881EA618700014A527 /* SSASideMenu.swift in Sources */,
@@ -493,8 +545,9 @@
 					"$(PROJECT_DIR)/PictureOfYou/Framework",
 				);
 				INFOPLIST_FILE = PictureOfYou/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.binhanh.rxtut.PictureOfYou;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binhanh.rxtut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PictureOfYou/PictureOfYou-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -513,8 +566,9 @@
 					"$(PROJECT_DIR)/PictureOfYou/Framework",
 				);
 				INFOPLIST_FILE = PictureOfYou/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.binhanh.rxtut.PictureOfYou;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binhanh.rxtut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PictureOfYou/PictureOfYou-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

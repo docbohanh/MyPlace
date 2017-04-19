@@ -40,7 +40,7 @@ class RealmBuilding: Object {
 extension RealmBuilding {
     func convertToSyncType() -> Building {
         return Building(
-            building: self.buildingID,
+            buildingID: self.buildingID,
             name: self.name,
             address: self.address,
             invester: self.invester,

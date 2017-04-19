@@ -69,49 +69,31 @@ struct Utility {
      - parameter navController:
      */
     func configureAppearance(navigation navController: UINavigationController, bgColor: UIColor = UIColor.Navigation.background) {
-                
-        navController.navigationBar.titleTextAttributes = [
-            NSFontAttributeName: UIFont(name: FontType.latoRegular.., size: FontSize.large--)!,
-            NSForegroundColorAttributeName: UIColor.white]
-        navController.navigationBar.barTintColor = bgColor
         
-        navController.navigationBar.barStyle = .black
-        navController.navigationBar.shadowImage = UIImage()
-        navController.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
-        navController.navigationBar.isTranslucent = true
-    }
-    
-    /// Lấy `GMSPath` từ mảng `coordinate`
-    func getGMSPath(from coordinate: [Coordinate]) -> GMSPath {
-        let path = GMSMutablePath()
-        coordinate.forEach { path.add($0) }
-        return path
-    }
-    
-    
-    /**
-     Tính khoảng các giữa 2 điểm
-     */
-    func calculateDistanceMetersFromCoordinate(_ from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) -> CLLocationDistance {
+//        navController.navigationBar.barTintColor = bgColor
+//        navController.navigationBar.barStyle = .black
+//        navController.navigationBar.shadowImage = UIImage()
+//        navController.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+//        navController.navigationBar.isTranslucent = true
+//        
+//        navController.navigationBar.titleTextAttributes = [
+//            NSFontAttributeName: UIFont(name: FontType.latoRegular.., size: FontSize.large--)!,
+//            NSForegroundColorAttributeName: UIColor.white
+//        ]
         
-        let fromLocation = CLLocation(latitude: from.latitude, longitude: from.longitude)
-        let toLocation = CLLocation(latitude: to.latitude, longitude: to.longitude)
-        return fromLocation.distance(from: toLocation)
-    }
-    
-    
-    /*
-     Format khoảng cách
-     */
-    func stringFromConvertDistanceToText(_ distance: Double, metersAccuracy: Bool = true) -> String {
-        if distance < 1000 && metersAccuracy {
-            return distance.toString(0) + " " + "m"
-        } else {
-            return (distance / 1000).toString(1) + " " + "Km"
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().isTranslucent = true
+        
+        if let font = UIFont(name: "Avenir-medium" , size: 18) {
+            UINavigationBar.appearance().titleTextAttributes = [
+                NSForegroundColorAttributeName : UIColor.white,
+                NSFontAttributeName : font
+            ]
         }
     }
     
-    
+       
     /// Giảm kích thước ảnh
     func resizeImage(_ image: UIImage) -> UIImage? {
         
@@ -211,21 +193,7 @@ struct Utility {
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: email)
     }
-    
-    ///
-    func resetDataWhenRejectedByServer() {
         
-        AppData.shared.token = ""
-        AppData.shared.account = nil
-        AppData.shared.updateWorkingStatus(userStatus: .idle, currentAction: 0)
-        
-        TrackingManager.shared.orderID = ""
-        TrackingManager.shared.tracking = nil
-        
-        Defaults[.isLogin] = false
-        
-    }
-    
     /**
      Gọi điện thoại
      */
