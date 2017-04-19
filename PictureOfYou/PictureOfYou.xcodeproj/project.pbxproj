@@ -20,6 +20,7 @@
 		1320BC021EA74BDE0033CF22 /* ParallaxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320BC011EA74BDE0033CF22 /* ParallaxCell.swift */; };
 		1320BC041EA753230033CF22 /* SKPhotoBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1320BC031EA753230033CF22 /* SKPhotoBrowser.framework */; };
 		1320BC051EA753230033CF22 /* SKPhotoBrowser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1320BC031EA753230033CF22 /* SKPhotoBrowser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1320BC071EA761300033CF22 /* BuildingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320BC061EA761300033CF22 /* BuildingListViewController.swift */; };
 		13BC21541EA6122D0014A527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21531EA6122D0014A527 /* AppDelegate.swift */; };
 		13BC21561EA6122D0014A527 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21551EA6122D0014A527 /* ViewController.swift */; };
 		13BC21591EA6122D0014A527 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13BC21571EA6122D0014A527 /* Main.storyboard */; };
@@ -99,6 +100,7 @@
 		1320BBFF1EA749CF0033CF22 /* MovingViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingViews.swift; sourceTree = "<group>"; };
 		1320BC011EA74BDE0033CF22 /* ParallaxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxCell.swift; sourceTree = "<group>"; };
 		1320BC031EA753230033CF22 /* SKPhotoBrowser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SKPhotoBrowser.framework; path = PictureOfYou/Framework/SKPhotoBrowser.framework; sourceTree = "<group>"; };
+		1320BC061EA761300033CF22 /* BuildingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingListViewController.swift; sourceTree = "<group>"; };
 		13BC21501EA6122D0014A527 /* PictureOfYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureOfYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13BC21531EA6122D0014A527 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13BC21551EA6122D0014A527 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				1320BBFC1EA749940033CF22 /* PTTableViewController.swift */,
 				1320BBF11EA746FE0033CF22 /* PTDetailViewController.swift */,
 				1320BBEF1EA746CF0033CF22 /* DetailViewController.swift */,
+				1320BC061EA761300033CF22 /* BuildingListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				13BC21861EA618700014A527 /* Images.swift in Sources */,
 				1320BBF21EA746FE0033CF22 /* PTDetailViewController.swift in Sources */,
 				1320BBF51EA747780033CF22 /* ConstraintsHalper.swift in Sources */,
+				1320BC071EA761300033CF22 /* BuildingListViewController.swift in Sources */,
 				13BC21A31EA61B660014A527 /* BuildingTableViewController.swift in Sources */,
 				1320BBF91EA748250033CF22 /* LayerAnimationHalper.swift in Sources */,
 				13BC21A51EA61B730014A527 /* Building.swift in Sources */,

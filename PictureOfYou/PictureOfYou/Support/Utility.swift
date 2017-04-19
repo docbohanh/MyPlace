@@ -68,29 +68,19 @@ struct Utility {
      
      - parameter navController:
      */
-    func configureAppearance(navigation navController: UINavigationController, bgColor: UIColor = UIColor.Navigation.background) {
+    func configureAppearance(navigation navController: UINavigationController, bgColor: UIColor = UIColor.main) {
         
-//        navController.navigationBar.barTintColor = bgColor
-//        navController.navigationBar.barStyle = .black
-//        navController.navigationBar.shadowImage = UIImage()
-//        navController.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
-//        navController.navigationBar.isTranslucent = true
-//        
-//        navController.navigationBar.titleTextAttributes = [
-//            NSFontAttributeName: UIFont(name: FontType.latoRegular.., size: FontSize.large--)!,
-//            NSForegroundColorAttributeName: UIColor.white
-//        ]
+        navController.navigationBar.barTintColor = bgColor
+        navController.navigationBar.barStyle = .black
+        navController.navigationBar.shadowImage = UIImage()
+        navController.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+        navController.navigationBar.isTranslucent = false
         
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().isTranslucent = true
+        navController.navigationBar.titleTextAttributes = [
+            NSFontAttributeName: UIFont(name: FontType.latoRegular.., size: FontSize.large--)!,
+            NSForegroundColorAttributeName: UIColor.white
+        ]
         
-        if let font = UIFont(name: "Avenir-medium" , size: 18) {
-            UINavigationBar.appearance().titleTextAttributes = [
-                NSForegroundColorAttributeName : UIColor.white,
-                NSFontAttributeName : font
-            ]
-        }
     }
     
        
@@ -256,8 +246,62 @@ struct Utility {
         return newString
     }
     
+    /// Convert thời gian theo dạng quá khứ
+    func stringFromPastTimeToText(_ time: TimeInterval) -> String {
+        let deltaTime = Date().timeIntervalSince1970 - time
+        
+        var string = String()
+        switch deltaTime {
+        case 0..<10:
+            string = "vừa xong"
+        case 10..<1.minutes:
+            string = deltaTime.toString(0) + " giây"
+        case 1.minutes..<1.hours:
+            string =  (deltaTime / 1.minutes).toString(0) + " phút"
+        case 1.hours..<1.days:
+            string = (deltaTime / 1.hours).toString(0) + " giờ"
+        case 1.days..<7.days:
+            string = (deltaTime / 1.days).toString(0) + " ngày"
+        case 7.days..<31.days:
+            string = (deltaTime / 7.days).toString(0) + " tuần"
+        case 31.days..<1.years:
+            string = (deltaTime / 31.days).toString(0) + " tháng"
+        case 1.year..<100.years:
+            string = (deltaTime / 1.years).toString(0) + " năm"
+        default:
+            break
+        }
+        
+        guard deltaTime > 10 else { return string }
+        
+        string += " trước"
+        return string
+    }
+    
 }
 
+
+
+extension Utility {
+    func split(longString: String, maxCharacter: Int) -> String {
+        
+        var leftString: String = ""
+        var rightString: String = ""
+        
+        for (i, letter) in longString.characters.enumerated() {
+            
+            if (i > maxCharacter && String(letter) == " ") {
+                rightString += String(letter)
+            } else {
+                leftString += String(letter)
+            }
+            
+        }
+        
+        return leftString
+    }
+    
+}
 
 
 

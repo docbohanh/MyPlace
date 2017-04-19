@@ -129,6 +129,8 @@ extension UIImage {
         case PlusIcon = "PlusIcon"
         case ShareIcon = "ShareIcon"
         case TransparentPixel = "TransparentPixel"
+        case empty = "empty"
+        case cloud = "Cloud"
         
         var image: UIImage {
             return UIImage(asset: self)

@@ -24,7 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        configureNavigationBar()
+//        configureNavigationBar()
+        
+        let navController = setupNavigationController()
+        
+        if let window = window {
+            window.rootViewController = navController
+            window.makeKeyAndVisible()
+        }
         
         return true
     }
@@ -65,6 +72,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 NSFontAttributeName : font
             ]
         }
+    }
+    
+    fileprivate func setupNavigationController() -> UINavigationController {
+        
+        let mainVC = BuildingListViewController()
+        let navigationController = UINavigationController(rootViewController: mainVC)
+        Utility.shared.configureAppearance(navigation: navigationController)
+        
+        return navigationController
     }
     
 }
