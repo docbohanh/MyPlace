@@ -19,9 +19,15 @@ class BuildingListViewController: UIViewController {
     
     var tableView: UITableView!
     
-    fileprivate var dateFormatter: DateFormatter = {
+    fileprivate var dateTimeFormatter: DateFormatter = {
         var formatter = DateFormatter()
         formatter.dateFormat = "HH:mm dd/MM/yyyy"
+        return formatter
+    }()
+    
+    fileprivate var timeFormatter: DateFormatter = {
+        var formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
         return formatter
     }()
     
@@ -38,7 +44,7 @@ class BuildingListViewController: UIViewController {
                 invester: "Nguyễn Văn A",
                 contractor: "Trần Quốc B",
                 phoneNumber: "0973360262",
-                createDate: Date().timeIntervalSince1970,
+                createDate: Date().timeIntervalSince1970 - 2.day,
                 imageID: ["Image1"]
             )
         ]
@@ -76,6 +82,24 @@ extension BuildingListViewController {
     
 }
 
+//MARK: PRIVATE METHOD
+extension BuildingListViewController {
+    func stringFromPastTime(_ time: TimeInterval) -> String {
+        let deltaTime = Date().timeIntervalSince1970 - time
+        
+        guard deltaTime > 1.day else {
+            return Utility.shared.stringFromPastTimeToText(time)
+        }
+        
+        if deltaTime < 2.day {
+            return timeFormatter.string(from: Date(timeIntervalSince1970: time)) + " hôm qua"
+        } else {
+            return dateTimeFormatter.string(from: Date(timeIntervalSince1970: time))
+        }
+        
+    }
+}
+
 // MARK: TABLE DATASOURCE
 extension BuildingListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,7 +118,7 @@ extension BuildingListViewController: UITableViewDataSource {
         cell.textLabel?.text = building.name
         cell.detailTextLabel?.text = Utility.shared.split(longString: building.address, maxCharacter: 40)
         
-        cell.labelTime.text = Utility.shared.stringFromPastTimeToText(building.createDate)
+        cell.labelTime.text = stringFromPastTime(building.createDate)
         cell.imageView?.image = UIImage.Asset.empty.image
         
         if let realmImage = DatabaseSupport.shared.getImageOf(buildingID: building.buildingID).last {

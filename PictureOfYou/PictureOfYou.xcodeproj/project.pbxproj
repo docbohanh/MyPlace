@@ -64,6 +64,7 @@
 		13BC21B11EA621AA0014A527 /* RealmImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21B01EA621AA0014A527 /* RealmImage.swift */; };
 		13BC21B31EA623B60014A527 /* DatabaseSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21B21EA623B60014A527 /* DatabaseSupport.swift */; };
 		13BC21B51EA6249F0014A527 /* RxRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21B41EA6249F0014A527 /* RxRealm.swift */; };
+		13CEED9E1EA847440087C88D /* TopLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEED9D1EA847440087C88D /* TopLeftLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -140,6 +141,7 @@
 		13BC21B01EA621AA0014A527 /* RealmImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmImage.swift; sourceTree = "<group>"; };
 		13BC21B21EA623B60014A527 /* DatabaseSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseSupport.swift; sourceTree = "<group>"; };
 		13BC21B41EA6249F0014A527 /* RxRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxRealm.swift; sourceTree = "<group>"; };
+		13CEED9D1EA847440087C88D /* TopLeftLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopLeftLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +302,7 @@
 		13BC21A11EA61B530014A527 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				13CEED9C1EA847290087C88D /* Custom */,
 				1320BBFE1EA749CF0033CF22 /* MovingLabel */,
 				13BC21A81EA61B900014A527 /* Cell */,
 			);
@@ -313,6 +316,14 @@
 				1320BC011EA74BDE0033CF22 /* ParallaxCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		13CEED9C1EA847290087C88D /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				13CEED9D1EA847440087C88D /* TopLeftLabel.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +429,7 @@
 				1320BBF01EA746CF0033CF22 /* DetailViewController.swift in Sources */,
 				13BC21851EA618700014A527 /* HUD.swift in Sources */,
 				13BC21B51EA6249F0014A527 /* RxRealm.swift in Sources */,
+				13CEED9E1EA847440087C88D /* TopLeftLabel.swift in Sources */,
 				1320BC021EA74BDE0033CF22 /* ParallaxCell.swift in Sources */,
 				1320BBFD1EA749940033CF22 /* PTTableViewController.swift in Sources */,
 				13BC21541EA6122D0014A527 /* AppDelegate.swift in Sources */,

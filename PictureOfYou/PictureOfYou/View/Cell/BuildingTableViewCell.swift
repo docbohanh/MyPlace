@@ -31,6 +31,7 @@ class BuildingTableViewCell: UITableViewCell {
     
     
     override func layoutSubviews() {
+        super.layoutSubviews()
         
         contentView.frame = CGRect(x: Size.Padding10..,
                                    y: Size.Padding5..,
@@ -48,16 +49,18 @@ class BuildingTableViewCell: UITableViewCell {
                                   y: 0,
                                   width: contentView.frame.width - imageView.frame.maxX - Size.Padding10.. * 2,
                                   height: 40)
+        textLabel?.sizeToFit()
         
         labelTime.frame =  CGRect(x: imageView.frame.maxX + Size.Padding10..,
-                                  y: contentView.frame.height  - Size.Label..,
+                                  y: contentView.frame.height - 25,
                                   width: contentView.frame.width - imageView.frame.maxX - Size.Padding10.. * 2,
-                                  height: Size.Label..)
+                                  height: 25)
         
         detailTextLabel?.frame = CGRect(x: imageView.frame.maxX + Size.Padding5..,
                                         y: textLabel!.frame.maxY,
                                         width: contentView.frame.width - imageView.frame.maxX - Size.Padding10..,
                                         height: 32)
+        detailTextLabel?.sizeToFit()
         
         
     }
@@ -129,4 +132,5 @@ extension BuildingTableViewCell {
         
         return label
     }
+    
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Building {
+struct Building: CustomStringConvertible {
     var buildingID: String
     var name: String                // Tên công trình
     var address: String             // Địa chỉ
@@ -29,6 +29,10 @@ struct Building {
         
         return result
         
+    }
+    
+    var description: String {
+        return "\(name) | \(address) | \(invester) | \(contractor) | \(phoneNumber)"
     }
 
     init(buildingID: String,
