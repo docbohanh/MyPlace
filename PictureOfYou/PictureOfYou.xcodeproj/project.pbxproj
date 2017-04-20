@@ -65,6 +65,19 @@
 		13BC21B31EA623B60014A527 /* DatabaseSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21B21EA623B60014A527 /* DatabaseSupport.swift */; };
 		13BC21B51EA6249F0014A527 /* RxRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC21B41EA6249F0014A527 /* RxRealm.swift */; };
 		13CEED9E1EA847440087C88D /* TopLeftLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEED9D1EA847440087C88D /* TopLeftLabel.swift */; };
+		13CEEDA01EA8927C0087C88D /* BuildingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEED9F1EA8927C0087C88D /* BuildingDetailViewController.swift */; };
+		13CEEDA21EA8AE1F0087C88D /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEEDA11EA8AE1F0087C88D /* TextFieldTableViewCell.swift */; };
+		13CEEDA41EA8AEBC0087C88D /* SeparatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEEDA31EA8AEBC0087C88D /* SeparatorTableViewCell.swift */; };
+		13CEEDA61EA8AFBC0087C88D /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEEDA51EA8AFBC0087C88D /* TextViewTableViewCell.swift */; };
+		13CEEDA81EA8AFFC0087C88D /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEEDA71EA8AFFC0087C88D /* PlaceholderTextView.swift */; };
+		13CEEDAA1EA8B3260087C88D /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEEDA91EA8B3260087C88D /* ImageScrollView.swift */; };
+		13CEEDAC1EA8B3560087C88D /* ItemPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEEDAB1EA8B3560087C88D /* ItemPhotoView.swift */; };
+		13CEEDAE1EA8B7D60087C88D /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEEDAD1EA8B7D60087C88D /* TitleCell.swift */; };
+		13CEEDB01EA8BA3E0087C88D /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CEEDAF1EA8BA3E0087C88D /* Eureka.framework */; };
+		13CEEDB11EA8BA3E0087C88D /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13CEEDAF1EA8BA3E0087C88D /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		13CEEDB31EA8BCEB0087C88D /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEEDB21EA8BCEB0087C88D /* FloatLabelTextField.swift */; };
+		13CEEDB51EA8BD390087C88D /* CustomEurekaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEEDB41EA8BD390087C88D /* CustomEurekaCell.swift */; };
+		13CEEDB71EA8BDAE0087C88D /* FloatLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEEDB61EA8BDAE0087C88D /* FloatLabelCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,6 +96,7 @@
 				13BC21941EA618D00014A527 /* PHExtensions.framework in Embed Frameworks */,
 				1320BC051EA753230033CF22 /* SKPhotoBrowser.framework in Embed Frameworks */,
 				13BC21981EA618D00014A527 /* SnapKit.framework in Embed Frameworks */,
+				13CEEDB11EA8BA3E0087C88D /* Eureka.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +156,18 @@
 		13BC21B21EA623B60014A527 /* DatabaseSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseSupport.swift; sourceTree = "<group>"; };
 		13BC21B41EA6249F0014A527 /* RxRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxRealm.swift; sourceTree = "<group>"; };
 		13CEED9D1EA847440087C88D /* TopLeftLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopLeftLabel.swift; sourceTree = "<group>"; };
+		13CEED9F1EA8927C0087C88D /* BuildingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingDetailViewController.swift; sourceTree = "<group>"; };
+		13CEEDA11EA8AE1F0087C88D /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		13CEEDA31EA8AEBC0087C88D /* SeparatorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorTableViewCell.swift; sourceTree = "<group>"; };
+		13CEEDA51EA8AFBC0087C88D /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
+		13CEEDA71EA8AFFC0087C88D /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
+		13CEEDA91EA8B3260087C88D /* ImageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		13CEEDAB1EA8B3560087C88D /* ItemPhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemPhotoView.swift; sourceTree = "<group>"; };
+		13CEEDAD1EA8B7D60087C88D /* TitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		13CEEDAF1EA8BA3E0087C88D /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = PictureOfYou/Framework/Eureka.framework; sourceTree = "<group>"; };
+		13CEEDB21EA8BCEB0087C88D /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
+		13CEEDB41EA8BD390087C88D /* CustomEurekaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEurekaCell.swift; sourceTree = "<group>"; };
+		13CEEDB61EA8BDAE0087C88D /* FloatLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +184,7 @@
 				13BC21931EA618D00014A527 /* PHExtensions.framework in Frameworks */,
 				1320BC041EA753230033CF22 /* SKPhotoBrowser.framework in Frameworks */,
 				13BC21971EA618D00014A527 /* SnapKit.framework in Frameworks */,
+				13CEEDB01EA8BA3E0087C88D /* Eureka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +277,7 @@
 		13BC219A1EA618D40014A527 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				13CEEDAF1EA8BA3E0087C88D /* Eureka.framework */,
 				1320BC031EA753230033CF22 /* SKPhotoBrowser.framework */,
 				1320BBEC1EA7207C0033CF22 /* PreviewTransition.framework */,
 				13BC21AB1EA61BE60014A527 /* Realm.framework */,
@@ -283,6 +311,7 @@
 				1320BBF11EA746FE0033CF22 /* PTDetailViewController.swift */,
 				1320BBEF1EA746CF0033CF22 /* DetailViewController.swift */,
 				1320BC061EA761300033CF22 /* BuildingListViewController.swift */,
+				13CEED9F1EA8927C0087C88D /* BuildingDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,6 +324,7 @@
 				13BC21A61EA61B7C0014A527 /* Image.swift */,
 				13BC21B01EA621AA0014A527 /* RealmImage.swift */,
 				13BC21B21EA623B60014A527 /* DatabaseSupport.swift */,
+				13CEEDAD1EA8B7D60087C88D /* TitleCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,6 +344,10 @@
 			children = (
 				13BC21A91EA61BA70014A527 /* BuildingTableViewCell.swift */,
 				1320BC011EA74BDE0033CF22 /* ParallaxCell.swift */,
+				13CEEDA11EA8AE1F0087C88D /* TextFieldTableViewCell.swift */,
+				13CEEDA51EA8AFBC0087C88D /* TextViewTableViewCell.swift */,
+				13CEEDA31EA8AEBC0087C88D /* SeparatorTableViewCell.swift */,
+				13CEEDB61EA8BDAE0087C88D /* FloatLabelCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -322,6 +356,11 @@
 			isa = PBXGroup;
 			children = (
 				13CEED9D1EA847440087C88D /* TopLeftLabel.swift */,
+				13CEEDA71EA8AFFC0087C88D /* PlaceholderTextView.swift */,
+				13CEEDA91EA8B3260087C88D /* ImageScrollView.swift */,
+				13CEEDAB1EA8B3560087C88D /* ItemPhotoView.swift */,
+				13CEEDB21EA8BCEB0087C88D /* FloatLabelTextField.swift */,
+				13CEEDB41EA8BD390087C88D /* CustomEurekaCell.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -412,28 +451,39 @@
 			files = (
 				1320BBFB1EA748E80033CF22 /* Extensions.swift in Sources */,
 				13BC21561EA6122D0014A527 /* ViewController.swift in Sources */,
+				13CEEDA41EA8AEBC0087C88D /* SeparatorTableViewCell.swift in Sources */,
 				13BC21AF1EA61CA90014A527 /* RealmBuilding.swift in Sources */,
 				1320BC001EA749CF0033CF22 /* MovingViews.swift in Sources */,
 				13BC21B31EA623B60014A527 /* DatabaseSupport.swift in Sources */,
 				13BC21A71EA61B7C0014A527 /* Image.swift in Sources */,
 				13BC21861EA618700014A527 /* Images.swift in Sources */,
 				1320BBF21EA746FE0033CF22 /* PTDetailViewController.swift in Sources */,
+				13CEEDA81EA8AFFC0087C88D /* PlaceholderTextView.swift in Sources */,
 				1320BBF51EA747780033CF22 /* ConstraintsHalper.swift in Sources */,
+				13CEEDA21EA8AE1F0087C88D /* TextFieldTableViewCell.swift in Sources */,
+				13CEEDAE1EA8B7D60087C88D /* TitleCell.swift in Sources */,
 				1320BC071EA761300033CF22 /* BuildingListViewController.swift in Sources */,
 				13BC21A31EA61B660014A527 /* BuildingTableViewController.swift in Sources */,
+				13CEEDA01EA8927C0087C88D /* BuildingDetailViewController.swift in Sources */,
 				1320BBF91EA748250033CF22 /* LayerAnimationHalper.swift in Sources */,
 				13BC21A51EA61B730014A527 /* Building.swift in Sources */,
 				13BC21891EA618700014A527 /* Utility.swift in Sources */,
 				1320BBF71EA747F20033CF22 /* ScreenShot.swift in Sources */,
 				13BC21B11EA621AA0014A527 /* RealmImage.swift in Sources */,
+				13CEEDB71EA8BDAE0087C88D /* FloatLabelCell.swift in Sources */,
 				1320BBF01EA746CF0033CF22 /* DetailViewController.swift in Sources */,
 				13BC21851EA618700014A527 /* HUD.swift in Sources */,
+				13CEEDB31EA8BCEB0087C88D /* FloatLabelTextField.swift in Sources */,
 				13BC21B51EA6249F0014A527 /* RxRealm.swift in Sources */,
 				13CEED9E1EA847440087C88D /* TopLeftLabel.swift in Sources */,
 				1320BC021EA74BDE0033CF22 /* ParallaxCell.swift in Sources */,
 				1320BBFD1EA749940033CF22 /* PTTableViewController.swift in Sources */,
+				13CEEDA61EA8AFBC0087C88D /* TextViewTableViewCell.swift in Sources */,
+				13CEEDB51EA8BD390087C88D /* CustomEurekaCell.swift in Sources */,
+				13CEEDAA1EA8B3260087C88D /* ImageScrollView.swift in Sources */,
 				13BC21541EA6122D0014A527 /* AppDelegate.swift in Sources */,
 				13BC21871EA618700014A527 /* LoggerSupport.swift in Sources */,
+				13CEEDAC1EA8B3560087C88D /* ItemPhotoView.swift in Sources */,
 				13BC21881EA618700014A527 /* SSASideMenu.swift in Sources */,
 				13BC21AA1EA61BA70014A527 /* BuildingTableViewCell.swift in Sources */,
 				13BC217A1EA618700014A527 /* Color.swift in Sources */,

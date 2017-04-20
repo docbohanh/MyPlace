@@ -39,11 +39,11 @@ class BuildingListViewController: UIViewController {
         building = [
             Building(
                 buildingID: UUID().uuidString,
-                name: "Công ty TNHH TM & XD Trung Chính",
-                address: "Ngõ 61 Bằng Liệt, Bằng A, Hoàng Liệt",
-                invester: "Nguyễn Văn A",
-                contractor: "Trần Quốc B",
-                phoneNumber: "0973360262",
+                name: "Bình Anh Electronics",
+                address: "Số 30 ngách 88/61 Giáp Nhị - Thịnh Liệt - Hoàng Mai – Hà Nội",
+                invester: "Đào Thanh Anh",
+                contractor: "Phùng Thị Thanh Bình",
+                phoneNumber: "0987654321",
                 createDate: Date().timeIntervalSince1970 - 2.day,
                 imageID: ["Image1"]
             )
@@ -91,8 +91,10 @@ extension BuildingListViewController {
             return Utility.shared.stringFromPastTimeToText(time)
         }
         
-        if deltaTime < 2.day {
+        if deltaTime < 2.days {
             return timeFormatter.string(from: Date(timeIntervalSince1970: time)) + " hôm qua"
+        } else if deltaTime < 3.days {
+            return timeFormatter.string(from: Date(timeIntervalSince1970: time)) + " hôm kia"
         } else {
             return dateTimeFormatter.string(from: Date(timeIntervalSince1970: time))
         }
@@ -115,8 +117,9 @@ extension BuildingListViewController: UITableViewDataSource {
     fileprivate func configFor(_ cell: BuildingTableViewCell, with building: Building) {
         cell.selectionStyle = .none
         
-        cell.textLabel?.text = building.name
-        cell.detailTextLabel?.text = Utility.shared.split(longString: building.address, maxCharacter: 40)
+        cell.textLabel?.text = Utility.shared.split(longString: building.name, maxCharacter: 33)
+        
+        cell.detailTextLabel?.text = Utility.shared.split(longString: building.address, maxCharacter: 51)
         
         cell.labelTime.text = stringFromPastTime(building.createDate)
         cell.imageView?.image = UIImage.Asset.empty.image
@@ -139,9 +142,24 @@ extension BuildingListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let detailVC = BuildingDetailViewController()
+        detailVC.delegate = self
+        detailVC.building = building[indexPath.row]
+        detailVC.title = "Chi tiết"
+        navigationController?.pushViewController(detailVC, animated: true)
+        
     }
 }
 
+// MARK: BUILDING DETAIL DELEGATE
+extension BuildingListViewController: BuildingDetailViewControllerDelegate {
+    func buildingAdded() {
+        
+    }
+}
+
+// MARK: SETUP VIEW
 extension BuildingListViewController {
     func setupAllSubview() {
         export = setupBarButtonItem(UIImage.Asset.cloud.image, selector: #selector(self.export(_:)))

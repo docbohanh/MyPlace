@@ -253,7 +253,7 @@ struct Utility {
         var string = String()
         switch deltaTime {
         case 0..<10:
-            string = "vừa xong"
+            string = "Vừa xong"
         case 10..<1.minutes:
             string = deltaTime.toString(0) + " giây"
         case 1.minutes..<1.hours:
@@ -286,13 +286,10 @@ extension Utility {
     func split(longString: String, maxCharacter: Int) -> String {
         
         var leftString: String = ""
-        var rightString: String = ""
         
         for (i, letter) in longString.characters.enumerated() {
             
-            if (i > maxCharacter && String(letter) == " ") {
-                rightString += String(letter)
-            } else {
+            if (i < maxCharacter) {
                 leftString += String(letter)
             }
             

@@ -131,6 +131,9 @@ extension UIImage {
         case TransparentPixel = "TransparentPixel"
         case empty = "empty"
         case cloud = "Cloud"
+        case top = "Top"
+        case down = "Down"
+        case camera = "camera"
         
         var image: UIImage {
             return UIImage(asset: self)

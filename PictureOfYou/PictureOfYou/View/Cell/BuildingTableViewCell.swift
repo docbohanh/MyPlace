@@ -95,7 +95,7 @@ extension BuildingTableViewCell {
         imageView?.backgroundColor = UIColor.clear
         imageView?.clipsToBounds = true
         
-        imageView?.layer.borderColor = UIColor.lightGray.cgColor
+        imageView?.layer.borderColor = UIColor.Misc.seperator.cgColor
         imageView?.layer.borderWidth = onePixel()
         
     }
@@ -114,13 +114,13 @@ extension BuildingTableViewCell {
         textLabel?.font = UIFont(name: FontType.latoSemibold.., size: FontSize.normal..)
         textLabel?.numberOfLines = 0
         textLabel?.textColor = UIColor.darkGray
-        textLabel?.sizeToFit()
+//        textLabel?.sizeToFit()
         
         detailTextLabel?.textAlignment = .left
         detailTextLabel?.font = UIFont(name: FontType.latoRegular.., size: FontSize.small++)
         detailTextLabel?.numberOfLines = 0
         detailTextLabel?.textColor = UIColor.gray
-        detailTextLabel?.sizeToFit()
+//        detailTextLabel?.sizeToFit()
     }
     
     func setupLabel() -> UILabel {
