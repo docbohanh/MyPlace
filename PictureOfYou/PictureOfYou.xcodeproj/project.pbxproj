@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13093F4E1EA9C3E400D2D900 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13093F4C1EA9C3E400D2D900 /* ImagePickerController.swift */; };
+		13093F4F1EA9C3E400D2D900 /* ImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13093F4D1EA9C3E400D2D900 /* ImageRow.swift */; };
+		13093F511EA9D5D500D2D900 /* MGSwipeTableCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13093F501EA9D5D500D2D900 /* MGSwipeTableCell.framework */; };
+		13093F521EA9D5D500D2D900 /* MGSwipeTableCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13093F501EA9D5D500D2D900 /* MGSwipeTableCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1320BBED1EA7207C0033CF22 /* PreviewTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1320BBEC1EA7207C0033CF22 /* PreviewTransition.framework */; };
 		1320BBEE1EA7207C0033CF22 /* PreviewTransition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1320BBEC1EA7207C0033CF22 /* PreviewTransition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1320BBF01EA746CF0033CF22 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320BBEF1EA746CF0033CF22 /* DetailViewController.swift */; };
@@ -90,6 +94,7 @@
 				13BC21901EA618D00014A527 /* CleanroomASL.framework in Embed Frameworks */,
 				13BC21921EA618D00014A527 /* CleanroomLogger.framework in Embed Frameworks */,
 				13BC219D1EA619150014A527 /* JGProgressHUD.framework in Embed Frameworks */,
+				13093F521EA9D5D500D2D900 /* MGSwipeTableCell.framework in Embed Frameworks */,
 				13BC21961EA618D00014A527 /* RealmSwift.framework in Embed Frameworks */,
 				1320BBEE1EA7207C0033CF22 /* PreviewTransition.framework in Embed Frameworks */,
 				13BC21AD1EA61BE60014A527 /* Realm.framework in Embed Frameworks */,
@@ -104,6 +109,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		13093F4C1EA9C3E400D2D900 /* ImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
+		13093F4D1EA9C3E400D2D900 /* ImageRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRow.swift; sourceTree = "<group>"; };
+		13093F501EA9D5D500D2D900 /* MGSwipeTableCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MGSwipeTableCell.framework; path = PictureOfYou/Framework/MGSwipeTableCell.framework; sourceTree = "<group>"; };
 		1320BBEC1EA7207C0033CF22 /* PreviewTransition.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreviewTransition.framework; path = PictureOfYou/Framework/PreviewTransition.framework; sourceTree = "<group>"; };
 		1320BBEF1EA746CF0033CF22 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1320BBF11EA746FE0033CF22 /* PTDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTDetailViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +186,7 @@
 				13BC218F1EA618D00014A527 /* CleanroomASL.framework in Frameworks */,
 				13BC21911EA618D00014A527 /* CleanroomLogger.framework in Frameworks */,
 				13BC219C1EA619150014A527 /* JGProgressHUD.framework in Frameworks */,
+				13093F511EA9D5D500D2D900 /* MGSwipeTableCell.framework in Frameworks */,
 				13BC21951EA618D00014A527 /* RealmSwift.framework in Frameworks */,
 				1320BBED1EA7207C0033CF22 /* PreviewTransition.framework in Frameworks */,
 				13BC21AC1EA61BE60014A527 /* Realm.framework in Frameworks */,
@@ -191,6 +200,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13093F4B1EA9C3E400D2D900 /* ImageRow */ = {
+			isa = PBXGroup;
+			children = (
+				13093F4C1EA9C3E400D2D900 /* ImagePickerController.swift */,
+				13093F4D1EA9C3E400D2D900 /* ImageRow.swift */,
+			);
+			path = ImageRow;
+			sourceTree = "<group>";
+		};
 		1320BBF31EA747780033CF22 /* Halpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +295,7 @@
 		13BC219A1EA618D40014A527 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				13093F501EA9D5D500D2D900 /* MGSwipeTableCell.framework */,
 				13CEEDAF1EA8BA3E0087C88D /* Eureka.framework */,
 				1320BC031EA753230033CF22 /* SKPhotoBrowser.framework */,
 				1320BBEC1EA7207C0033CF22 /* PreviewTransition.framework */,
@@ -355,6 +374,7 @@
 		13CEED9C1EA847290087C88D /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				13093F4B1EA9C3E400D2D900 /* ImageRow */,
 				13CEED9D1EA847440087C88D /* TopLeftLabel.swift */,
 				13CEEDA71EA8AFFC0087C88D /* PlaceholderTextView.swift */,
 				13CEEDA91EA8B3260087C88D /* ImageScrollView.swift */,
@@ -455,6 +475,7 @@
 				13BC21AF1EA61CA90014A527 /* RealmBuilding.swift in Sources */,
 				1320BC001EA749CF0033CF22 /* MovingViews.swift in Sources */,
 				13BC21B31EA623B60014A527 /* DatabaseSupport.swift in Sources */,
+				13093F4F1EA9C3E400D2D900 /* ImageRow.swift in Sources */,
 				13BC21A71EA61B7C0014A527 /* Image.swift in Sources */,
 				13BC21861EA618700014A527 /* Images.swift in Sources */,
 				1320BBF21EA746FE0033CF22 /* PTDetailViewController.swift in Sources */,
@@ -476,6 +497,7 @@
 				13CEEDB31EA8BCEB0087C88D /* FloatLabelTextField.swift in Sources */,
 				13BC21B51EA6249F0014A527 /* RxRealm.swift in Sources */,
 				13CEED9E1EA847440087C88D /* TopLeftLabel.swift in Sources */,
+				13093F4E1EA9C3E400D2D900 /* ImagePickerController.swift in Sources */,
 				1320BC021EA74BDE0033CF22 /* ParallaxCell.swift in Sources */,
 				1320BBFD1EA749940033CF22 /* PTTableViewController.swift in Sources */,
 				13CEEDA61EA8AFBC0087C88D /* TextViewTableViewCell.swift in Sources */,

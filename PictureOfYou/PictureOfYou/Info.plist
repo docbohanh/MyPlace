@@ -57,5 +57,9 @@
 	<false/>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) needs camera access for this function.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(PRODUCT_NAME) needs photo access for this function.</string>
 </dict>
 </plist>

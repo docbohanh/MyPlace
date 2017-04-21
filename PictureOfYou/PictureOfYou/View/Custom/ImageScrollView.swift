@@ -31,7 +31,7 @@ class ImageScrollView: UIView {
     /**
      Số lượng ảnh tối đa hiển thị trong 1 page
      */
-    let maxItem: CGFloat = 3
+    let maxVehicle: CGFloat = 3
     
     
     var selectedPosition: Int = 0
@@ -65,9 +65,10 @@ class ImageScrollView: UIView {
         arrowLeft.center.y = scrollView.center.y
         arrowRight.center.y = scrollView.center.y
         
-        
-        /// Độ rộng của 1 view item        
-        let imgWidth = bounds.width / min(maxItem, CGFloat(arrayPhoto.count))
+        /**
+         Độ rộng của 1 view loại image
+         */
+        let imgWidth = bounds.width / min(maxVehicle, CGFloat(arrayPhoto.count))
         
         scrollView.contentSize = CGSize(width: CGFloat(arrayPhoto.count) * imgWidth, height: scrollView.frame.height)
         arrowRight.isHidden = scrollView.contentSize.width <= bounds.width
@@ -187,7 +188,7 @@ extension ImageScrollView: UIScrollViewDelegate {
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         
-        let widthCarView = bounds.width / min(maxItem, CGFloat(arrayPhoto.count))
+        let widthCarView = bounds.width / min(maxVehicle, CGFloat(arrayPhoto.count))
         
         guard scrollView.contentOffset.x.truncatingRemainder(dividingBy: widthCarView) != 0 else { return }
         let pos = Int(scrollView.contentOffset.x / widthCarView + 0.5)
@@ -204,8 +205,8 @@ extension ImageScrollView {
         clipsToBounds = true
         
         setupScrollView()
-        arrowLeft = setupArrowButton(Icon.Nav.back, isHidden: true)
-        arrowRight = setupArrowButton(Icon.Nav.right)
+        arrowLeft = setupArrowButton(Icon.Nav.back.tint(.orange), isHidden: true)
+        arrowRight = setupArrowButton(Icon.Nav.right.tint(.orange))
         
         addSubview(arrowLeft)
         addSubview(arrowRight)

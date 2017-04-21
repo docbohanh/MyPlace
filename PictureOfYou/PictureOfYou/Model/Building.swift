@@ -21,6 +21,8 @@ struct Building: CustomStringConvertible {
     var imageIDs: String {
         var result: String = ""
         
+        guard imageID.count > 0 else { return result }
+        
         for (i) in 0..<imageID.count - 1 {
             result.append(imageID[i] + ",")
         }

@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //transparent background
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().isTranslucent = true
+//        UINavigationBar.appearance().isTranslucent = true
         
         
         if let font = UIFont(name: "Avenir-medium" , size: 18) {

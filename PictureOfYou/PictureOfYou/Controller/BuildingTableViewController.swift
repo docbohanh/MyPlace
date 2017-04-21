@@ -10,7 +10,7 @@ import UIKit
 
 public class BuildingTableViewController: PTTableViewController {
     
-    fileprivate let items: [(name: String, title: String)] = [
+    fileprivate let items: [(imageName: String, title: String)] = [
         ("1", "River cruise"),
         ("2", "North Island"),
         ("3", "Mountain trail"),
@@ -30,7 +30,7 @@ extension BuildingTableViewController {
         guard let cell = cell as? ParallaxCell else { return }
         
         let index = indexPath.row % items.count
-        let imageName = items[index].name
+        let imageName = items[index].imageName
         let title = items[index].title
         
         if let image = UIImage(named: imageName) {

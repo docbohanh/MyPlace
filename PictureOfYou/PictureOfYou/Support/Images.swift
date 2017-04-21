@@ -134,6 +134,7 @@ extension UIImage {
         case top = "Top"
         case down = "Down"
         case camera = "camera"
+        case imgHolder = "ImgPlaceholder"
         
         var image: UIImage {
             return UIImage(asset: self)

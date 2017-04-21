@@ -38,6 +38,38 @@ extension DatabaseSupport {
         }
     }
     
+    func insert(building: RealmBuilding) {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(building, update: true)
+            }
+        }
+        catch {
+            Log.message(.error, message: "Realm - Cannot insert Image: \(error)")
+        }
+    }
+    
+    func deleteBuilding(_ id: String) {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                guard let realmBuilding = realm.object(ofType: RealmBuilding.self, forPrimaryKey: id) else { return }
+                realm.delete(realmBuilding)
+                Log.message(.debug, message: "Realm - deleted buildingID: \(id)")
+                
+                let realmImage = DatabaseSupport.shared.getAllImages().filter { $0.buildingID == id }
+                realm.delete(realmImage)
+                Log.message(.debug, message: "Realm - deleted realmImage")
+                
+            }
+        }
+        catch {
+            Log.message(.error, message: "Realm - delete building error: \(error)")
+            
+        }
+    }
+    
     
     func getAllImages() -> [RealmImage] {
         do {
@@ -70,6 +102,47 @@ extension DatabaseSupport {
         catch {
             Log.message(.error, message: "getImage error: \(error)")
             return []
+        }
+    }
+    
+    func insert(image: RealmImage) {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(image, update: true)
+            }
+        }
+        catch {
+            Log.message(.error, message: "Realm - Cannot insert Image: \(error)")
+        }
+    }
+    
+    func deleteImage(id: String) {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                guard let image = realm.object(ofType: RealmImage.self, forPrimaryKey: id) else { return }
+                realm.delete(image)
+                Log.message(.debug, message: "Realm - delete imageID: \(id)")
+            }
+        }
+        catch {
+            Log.message(.error, message: "Realm - delete image error: \(error)")
+            
+        }
+    }
+    
+    func deleteImage(_ images: [RealmImage]) {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.delete(images)
+                Log.message(.debug, message: "Realm - delete imageID: \(images.map { $0.imageID })")
+            }
+        }
+        catch {
+            Log.message(.error, message: "Realm - delete [image] error: \(error)")
+            
         }
     }
     

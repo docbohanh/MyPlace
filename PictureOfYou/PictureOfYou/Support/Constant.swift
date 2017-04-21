@@ -16,17 +16,8 @@ struct DefaultValue {
 }
 
 enum AppNotification: String {
-    case SaveTrackingSignal                 = "save_tracking"
-    case updateOrderStatus                  = "update_order_status"
-    case updateOrderStatusAndUploadTracking = "update_order_status_and_up_tracking"
-    case movingDone                         = "moving_done"
-    case tcpStartPing                       = "tcp_start_ping"
-    case tcpStopPing                        = "tcp_stop_ping"
-    case coordinateUpdated                  = "coordinate_updated"
-    case logout                             = "log_out"
-    case reloadStaffMonitorList             = "reload_staff_monitor_list"
     
-    case tcpRelogin                         = "tcp_relogin"
+    case deleteImage = "deleteImage"
     
     var name: Notification.Name {
         return Notification.Name(rawValue: self.rawValue)

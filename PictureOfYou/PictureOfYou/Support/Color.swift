@@ -62,7 +62,7 @@ extension UIColor {
         self.init(red:red, green:green, blue:blue, alpha:alpha)
     }
     
-    static var main: UIColor { return UIColor(rgba: "0087df") } // Màu Xanh da trời
+    static var main: UIColor { return UIColor(rgba: "00aff0") } // Màu Xanh da trời
     static var mediumRed: UIColor { return UIColor(rgba: "db4437") }
     static var lightGreen:  UIColor { return UIColor(rgba: "8BC34A") }
     static var greenery: UIColor { return UIColor(rgba: "88b04b") }

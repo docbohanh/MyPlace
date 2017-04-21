@@ -286,13 +286,23 @@ extension Utility {
     func split(longString: String, maxCharacter: Int) -> String {
         
         var leftString: String = ""
+        var rightString: String = ""
         
-        for (i, letter) in longString.characters.enumerated() {
+        var split: Bool = false
+        var i = 0
+        
+        for letter in longString.characters {
+            if i > maxCharacter && String(letter) == " " {
+                split = true
+            }
             
-            if (i < maxCharacter) {
+            if split {
+                rightString += String(letter)
+            } else {
                 leftString += String(letter)
             }
             
+            i += 1
         }
         
         return leftString

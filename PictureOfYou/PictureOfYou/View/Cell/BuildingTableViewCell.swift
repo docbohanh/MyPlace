@@ -8,8 +8,9 @@
 
 import UIKit
 import PHExtensions
+import MGSwipeTableCell
 
-class BuildingTableViewCell: UITableViewCell {
+class BuildingTableViewCell: MGSwipeTableCell {
     
     static let buildingIdentifier = "BuildingCell"
     
@@ -17,7 +18,12 @@ class BuildingTableViewCell: UITableViewCell {
         case Padding15 = 15, Padding10 = 10, Label = 30, Image = 60, icon = 22, padding7 = 7, Padding5 = 5, button = 64
     }
     
+    var mainView: UIView!
+    var thumbnail: UIImageView!
+    var name: UILabel!
+    var address: UILabel!
     var labelTime: UILabel!
+    var bottomView: UIView!
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
@@ -33,35 +39,31 @@ class BuildingTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        contentView.frame = CGRect(x: Size.Padding10..,
-                                   y: Size.Padding5..,
-                                   width: bounds.width - Size.Padding10.. * 2,
-                                   height: bounds.height - Size.Padding5.. * 2)
+        mainView.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
         
-        imageView?.frame = CGRect(x: Size.Padding5.. / 2,
-                                  y: Size.Padding5.. / 2,
-                                  width: contentView.frame.height + Size.Padding15..,
-                                  height: contentView.frame.height - Size.Padding5..)
+        thumbnail.frame = CGRect(x: Size.Padding5.. / 2,
+                                 y: Size.Padding5.. / 2,
+                                 width: mainView.frame.height + Size.Padding15..,
+                                 height: mainView.frame.height - Size.Padding5..)
         
-        guard let imageView = imageView else { return }
+        name.frame = CGRect(x: thumbnail.frame.maxX + Size.Padding5..,
+                            y: thumbnail.frame.minY,
+                            width: mainView.frame.width - thumbnail.frame.maxX - Size.Padding10.. * 2,
+                            height: 40)
+        name.sizeToFit()
         
-        textLabel?.frame = CGRect(x: imageView.frame.maxX + Size.Padding5..,
-                                  y: 0,
-                                  width: contentView.frame.width - imageView.frame.maxX - Size.Padding10.. * 2,
-                                  height: 40)
-        textLabel?.sizeToFit()
-        
-        labelTime.frame =  CGRect(x: imageView.frame.maxX + Size.Padding10..,
-                                  y: contentView.frame.height - 25,
-                                  width: contentView.frame.width - imageView.frame.maxX - Size.Padding10.. * 2,
+        labelTime.frame =  CGRect(x: thumbnail.frame.maxX + Size.Padding10..,
+                                  y: mainView.frame.height - 25,
+                                  width: mainView.frame.width - thumbnail.frame.maxX - Size.Padding10.. * 2,
                                   height: 25)
         
-        detailTextLabel?.frame = CGRect(x: imageView.frame.maxX + Size.Padding5..,
-                                        y: textLabel!.frame.maxY,
-                                        width: contentView.frame.width - imageView.frame.maxX - Size.Padding10..,
-                                        height: 32)
-        detailTextLabel?.sizeToFit()
+        address.frame = CGRect(x: thumbnail.frame.maxX + Size.Padding5..,
+                               y: name.frame.maxY,
+                               width: mainView.frame.width - thumbnail.frame.maxX - Size.Padding10..,
+                               height: 32)
+        address.sizeToFit()
         
+        bottomView.frame = CGRect(x: 0, y: bounds.height - onePixel(), width: bounds.width, height: onePixel())
         
     }
     
@@ -70,65 +72,65 @@ class BuildingTableViewCell: UITableViewCell {
 extension BuildingTableViewCell {
     
     func setup() {
-        setupImageView()
-        setupTitle()
-        
-        labelTime = setupLabel()
-        contentView.addSubview(labelTime)
-        
         backgroundColor = .clear
-        contentView.backgroundColor = .white
-        contentView.layer.cornerRadius = 2
+        contentView.backgroundColor = .clear
         
-        contentView.layer.masksToBounds = false
-        contentView.layer.shadowRadius = 2.0
-        contentView.layer.shadowOpacity = 0.3
-        contentView.layer.shadowOffset = CGSize(width: 2, height: 3)
-        contentView.layer.shadowColor = UIColor.lightGray.cgColor
+        mainView = setupView(bgColor: .white)
+        
+        thumbnail = setupImage()
+        name = setupLabel(textColor: .darkGray,
+                          font: UIFont(name: FontType.latoSemibold.., size: FontSize.normal..)!,
+                          alignment: .left,
+                          numberOfLine: 0)
+        
+        address = setupLabel(textColor: .gray,
+                             font: UIFont(name: FontType.latoRegular.., size: FontSize.small++)!,
+                             alignment: .left,
+                             numberOfLine: 0)
+        
+        labelTime = setupLabel(textColor: .darkGray,
+                               font: UIFont(name: FontType.latoSemibold.., size: FontSize.small..)!,
+                               alignment: .right,
+                               numberOfLine: 1)
+        
+        bottomView = setupView()
+        
+        mainView.addSubview(thumbnail)
+        mainView.addSubview(name)
+        mainView.addSubview(address)
+        mainView.addSubview(labelTime)
+        mainView.addSubview(bottomView)
+        
+        contentView.addSubview(mainView)
         
     }
     
-    
-    func setupImageView() {
-        
-        imageView?.contentMode = .scaleAspectFill
-        imageView?.backgroundColor = UIColor.clear
-        imageView?.clipsToBounds = true
-        
-        imageView?.layer.borderColor = UIColor.Misc.seperator.cgColor
-        imageView?.layer.borderWidth = onePixel()
-        
+    func setupView(bgColor: UIColor = UIColor.Misc.seperator) -> UIView {
+        let view = UIView()
+        view.backgroundColor = bgColor
+        return view
     }
     
-    func setupIconView() -> UIImageView {
-        let icon = UIImageView()
-        icon.contentMode = .scaleAspectFill
-        icon.backgroundColor = UIColor.clear
-        icon.clipsToBounds = true
-        return icon
+    
+    func setupImage() -> UIImageView {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleToFill
+        imageView.layer.borderColor = UIColor.Misc.seperator.cgColor
+        imageView.layer.borderWidth = onePixel()
+        return imageView
     }
     
-    func setupTitle() {
+    func setupLabel(
+        textColor: UIColor = .gray,
+        font: UIFont = UIFont(name: FontType.latoRegular.., size: FontSize.small++)!,
+        alignment: NSTextAlignment = .left,
+        numberOfLine: Int = 0) -> UILabel {
         
-        textLabel?.textAlignment = .left
-        textLabel?.font = UIFont(name: FontType.latoSemibold.., size: FontSize.normal..)
-        textLabel?.numberOfLines = 0
-        textLabel?.textColor = UIColor.darkGray
-//        textLabel?.sizeToFit()
-        
-        detailTextLabel?.textAlignment = .left
-        detailTextLabel?.font = UIFont(name: FontType.latoRegular.., size: FontSize.small++)
-        detailTextLabel?.numberOfLines = 0
-        detailTextLabel?.textColor = UIColor.gray
-//        detailTextLabel?.sizeToFit()
-    }
-    
-    func setupLabel() -> UILabel {
         let label = UILabel()
-        label.textAlignment = .right
-        label.font = UIFont(name: FontType.latoRegular.., size: FontSize.small--)
-        label.numberOfLines = 1
-        label.textColor = UIColor.gray
+        label.textAlignment = alignment
+        label.font = font
+        label.numberOfLines = numberOfLine
+        label.textColor = textColor
         
         return label
     }
