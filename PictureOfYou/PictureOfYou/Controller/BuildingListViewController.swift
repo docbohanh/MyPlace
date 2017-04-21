@@ -87,6 +87,8 @@ extension BuildingListViewController {
         let detailVC = BuildingDetailViewController()
         detailVC.delegate = self
         detailVC.isNewBuilding = true
+        detailVC.title = "Thêm mới địa điểm"
+        
         detailVC.building = Building(
             buildingID: UUID().uuidString,
             name: "",

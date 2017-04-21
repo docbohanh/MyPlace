@@ -186,7 +186,7 @@ extension BuildingDetailViewController {
             imageScrollView.arrayPhotoView.forEach { view in
                 view.button.isHidden = true
             }
-            imageRow.cell.accessoryView = imageScrollView
+            imageRow.cell.contentView.addSubview(imageScrollView)
             return
         }
         
@@ -198,7 +198,7 @@ extension BuildingDetailViewController {
             view.imageView.isUserInteractionEnabled = true
         })
         
-        imageRow.cell.accessoryView = imageScrollView
+        imageRow.cell.contentView.addSubview(imageScrollView)
         
     }
     
@@ -400,7 +400,7 @@ extension BuildingDetailViewController {
                     imageScrollView.arrayPhotoView.forEach { view in
                         view.button.isHidden = true
                     }
-                    cell.accessoryView = imageScrollView
+                    cell.contentView.addSubview(imageScrollView)
                     return
                 }
                 
@@ -412,7 +412,7 @@ extension BuildingDetailViewController {
                     view.imageView.isUserInteractionEnabled = true
                 })
                 
-                cell.accessoryView = imageScrollView
+                cell.contentView.addSubview(imageScrollView)
                 
             })
         
@@ -464,7 +464,7 @@ extension BuildingDetailViewController {
             view.imageView.isUserInteractionEnabled = true
         })
         
-        imageRow.cell.accessoryView = imageScrollView
+        imageRow.cell.contentView.addSubview(imageScrollView)
     }
 }
 
